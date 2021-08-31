@@ -17,12 +17,14 @@ Modèle ML
 
 ## Stratégie de feature extraction:
 
-# TF-IDF avec n-gram de 3 mots maximum
+1. TF-IDF
+2. n-gram de 3 mots maximum
+3. stopwords (utilisaation de WordCloud)
 
 # Autres stratégies
 
  Latent Dirichlet Allocation
- Utilisation de word cloud pour identifier des stopwords
+ 
 
 # Métriques utilisé:
 
@@ -43,14 +45,16 @@ Utilisation de cross-validation pour minimiser le risque de overfitting
 
 3. Le Decision Tree a eu la perfomance la moins bonne avec un f1-score moyen de 89%.
 
-4. Performance : Temps training
-En terme de temps de training, tous les modèles ont pris entre 0-5 seconds, sauf le Random Forest qui a pris entre 10-30 fois plus de temps pour le training.
-Performance en terme de consistence
-Le RF et le logistic regression ont la plus petite variance de f1-score
+## Performance : Temps training
 
-5. LDA : Le latent Dirichlet a permis d'identifier des regroupements possible. Le cricket et Rugby était les sports pour lequel plus de regroupements ont été identifiés
+4. En terme de temps de training, tous les modèles ont pris entre 0-5 seconds, sauf le Random Forest qui a pris entre 10-30 fois plus de temps pour le training.
 
-6. Classes plus difficile à prédire
+## Performance en terme de consistence
+5. Le RF et le logistic regression ont la plus petite variance de f1-score
+
+6. LDA : Le latent Dirichlet a permis d'identifier des regroupements possible. Le cricket et Rugby était les sports pour lequel plus de regroupements ont été identifiés
+
+7. Classes plus difficile à prédire
 Le football et le rugby ont été le plus difficile à prédire. Dans le logistic regression, qui avait une très bonne performance, on a eu une mauvaise classification entre les sports de balle football, rugby,le cricket le tennis. C'est plus souvent le football qui est mal prédit.On peut le noter dans les f1-score pour le football qui est généralement plus bas.
 
 ### Conclusions
